@@ -14,7 +14,7 @@ def radio(frequency, volume, onlyVolume=False, mute=False):
     data[4] = 0x02
     data[5] = 0x00
     data[6] = 0x08
-    data[7] = (0x80 | volumeN)
+    data[7] = (0x80 | volume)
     
     i2c.writeto(0x10, data)
   #radio(frequency= XX.X, volume= 0-15, onlyVolume=False/True, mute=False/True)
